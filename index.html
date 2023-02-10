@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Diagram</title>
+  </head>
+  <body>
+	<div id="mermaidDiagram"></div>
+	<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+	<script>
+		var conceptualViewMarkup = "graph LR\nA-->B-->C-->D";
+		mermaid.mermaidAPI.initialize({
+            	startOnLoad: true
+		});
+		mermaid.render('mermaidDiagramHolder', conceptualViewMarkup, function (svgCode) {
+			document.getElementById('mermaidDiagram').innerHTML = svgCode;
+		});
+	</script>
+  </body>
+</html>
